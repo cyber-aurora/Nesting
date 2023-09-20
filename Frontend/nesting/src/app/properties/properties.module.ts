@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { PropertiesRoutingModule } from './properties-routing.module';
 import { PropertyFormComponent } from './views/property-form/property-form.component';
@@ -21,6 +23,8 @@ import { PreviewbtnComponent } from './components/previewbtn/previewbtn.componen
 import { SaleRentformComponent } from './views/sale-rentform/sale-rentform.component';
 import { SaleRentComponent } from './components/sale-rent/sale-rent.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { ReservebtnComponent } from './components/reservebtn/reservebtn.component';
+import { ReservemodalComponent } from './components/reservemodal/reservemodal.component';
 
 
 @NgModule({
@@ -43,13 +47,15 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     SaleRentformComponent,
     SaleRentComponent,
     FileUploadComponent,
-
-
+    ReservebtnComponent,
+    ReservemodalComponent
   ],
   imports: [
     CommonModule,
     PropertiesRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    NgbModalModule
   ]
 })
 export class PropertiesModule { }
